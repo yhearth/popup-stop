@@ -15,8 +15,8 @@ const popAlldayXbtn = $('.notic-popup .btn-all-day');
 
 // 날짜 : 내용 tab 두칸씩
 
-
-var getCookie = function (cname) {
+//쿠키 값 받아오기 //Y?''
+function getCookie(cname){
     var name = cname + "=";
     var ca = document.cookie.split(';');
     for(var i=0; i<ca.length; i++) {
@@ -26,38 +26,31 @@ var getCookie = function (cname) {
     }
     return "";
 }
-var setCookie = function (cname, cvalue, exminutes) {
-    var todayDate = new Date();
-   // todayDate.setTime(todayDate.getTime() + (exdays*24*60*60*1000));    
-    todayDate.setTime(todayDate.getTime() + (exminutes * 60 * 1000));
-    var expires = "expires=" + todayDate.toUTCString(); // UTC기준의 시간에 exdays인자로 받은 값에 의해서 cookie가 설정 됩니다.
-    document.cookie = cname + "=" + cvalue + "; " + expires;
+//쿠키 값 설정
+function setCookie(cname, cvalue, exminutes) {
+    let todayDate = new Date();
+    todayDate.setTime(todayDate.getTime() + (exminutes*60*1000));    
+    let expires = "expires=" + todayDate.toUTCString();
+    document.cookie = cname + "=" + cvalue + "; path=/; " + expires;//현재경로 path=/
 }
 function couponClose(){
     setCookie("close","Y",1);//기간( ex. 1은 하루, 7은 일주일)
-    console.log("팝업 숨어");
+
     popup.animate({ opacity: 0 }, 300, function () {popup.css({ display: 'none', opacity: '0' });});
     $('html').css({ overflow: ''});
 }
-
+//cookie check
 function popupCheck(){
-    var cookiedata = document.cookie;
-    if(cookiedata.indexOf("close=Y")<0){
-        console.log("팝업 나와");
+    //let cookiedata = document.cookie;
+    let cookiedata = getCookie("close")
+    // if(cookiedata.indexOf("close=Y")<0)
+    if(cookiedata !== "Y"){
         noticeCheck();
     }else{
-        console.log("팝업 숨어");
         popup.css({ display: 'none', opacity: '0' });
         $('html').css({ overflow: ''});
     }
-    popAlldayXbtn.click(function(){
-        couponClose();
-    });
 }
-
-
-
-
 
 //공지사항 확인 여부 
 function noticeCheck(){
@@ -187,6 +180,11 @@ function noticBtnClick(){
         $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
     })
 
+    //오늘 하루동안 보지 않기
+    popAlldayXbtn.click(function(){
+        couponClose();
+    });
+
 }
 
 
@@ -201,31 +199,3 @@ var swiper = new Swiper(".notice-pop-slide", {
 
 
 
-
-//삭제
-// function popupReplace(){
-//     for (var i = 0; i < popupTit.length; i++){
-//         $(popupTit[i]).text(titArr[i]);
-//     }
-//     for (var i = 0; i < popupDesc.length; i++){
-//         $(popupDesc[i]).text(contentArr[i]);
-//     }
-//     for (var i = 0; i < popupPcImg.length; i++){
-//         if (popupPcImg[i].nodeName === "SOURCE") {
-//             $(popupPcImg[i]).attr("srcset", pcimgSrcArr[i]);
-//           }
-//     }
-//     for (var i = 0; i < popupMoImg.length; i++){
-//         if (popupMoImg[i].nodeName === "SOURCE") {
-//             $(popupMoImg[i]).attr("srcset", moimgSrcArr[i]);
-//           }
-//     }
-//     for (var i = 0; i < popupImg.length; i++) {
-//         if (popupImg[i].nodeName === "IMG") {
-//           $(popupImg[i]).attr("src", imgSrcArr[i]);
-//         }
-//       }
-
-
-
-// }
