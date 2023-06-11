@@ -1,0 +1,1495 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Samsung Foundry Event</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10">
+<link rel="shortcut icon" href="./images/Favicon.png">
+<meta name="description" content="Samsung Foundry Forum & SAFE Forum 2023">
+<meta property="og:image" content="./images/ogimg.jpg">
+<meta property="og:title" content="Samsung Foundry Event">
+<meta property="og:description" content="Samsung Foundry Forum & SAFE Forum 2023">
+
+<link rel="stylesheet" href="./css/common.css">
+<link rel="stylesheet" href="./css/mypage.css">
+<script src="./js/jquery-3.5.1.min.js"></script>
+<script src="./js/jqyery.easing.1.3.js"></script>
+<!-- 2023.06.07 :: notice 팝업 슬라이드 기능 추가 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.1.1/swiper-bundle.min.js"></script>
+<!-- 2023.06.08 :: notice 팝업 분리하여 작업-->
+<link rel="stylesheet" href="./css/notice.css">
+
+</head>
+<body>
+
+    <div class="page-mypage">
+        <div class="f-inner">
+            <div class="mypage-top">
+                <!-- 개인정보 영역 -->
+                <div class="profile-con">
+                    <div class="profile-box">
+                        <div class="lf-con">
+                            <h3 class="name">Jun seomoon</h3>
+                            <p class="position">
+                                <span>Anonymous corp</span>
+                                <span>Sales Manager</span>
+                            </p>
+                        </div>
+                        <div class="rt-con">
+                            <button class="logout btn-popup" data-index="01">Logout</button>
+                            <div class="btn-wrap">
+                                <button type="button" class="basic-btn dark-bg btn-popup" data-index="02">Edit Profile</button>
+                                <button type="button" class="basic-btn light-bg btn-popup" data-index="03">Get your QR</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- // 개인정보 영역 -->
+                <!-- 
+                    등록국가 탭 ::
+                    button에 data-country="us", data-country="kr"이 붙습니다.
+                    아래의 등록국가 이벤트정보 항목과 dataset값이 동일하게 들어갑니다.
+                -->
+                <div class="country-tab">
+                    <button type="button" class="selected" data-country="us">US</button>
+                    <button type="button" data-country="kr">KR</button>
+                </div>
+                <!-- // 등록국가 탭 -->
+                <button type="button" class="add-btn basic-btn dark-bg btn-popup" data-index="04">Additional Registration</button>
+            </div>
+
+
+            <!-- 
+                등록 국가 이벤트정보 영역 :: 
+                이벤트정보 항목 dl에 data-country="us", data-country="kr"이 붙습니다.
+                상단의 등록국가 탭과 dataset값이 동일하게 들어갑니다.
+            -->
+            <!-- Session -->
+            <dl class="item country-item session" data-country="us">
+                <dt>
+                    <a href="#" onclick="return false;" class="item-trigger">
+                        <h3 class="tit">Session</h3>
+                        <p class="sub-txt">
+                            <span>San Jose</span>
+                            <span>SFF, SAFE</span>
+                        </p>
+                        <!-- 
+                            승인상태에 따라 state 클래스 뒤에 다른 클래스가 붙습니다.
+                            Confirmed 상태일 경우 : confirmed 클래스
+                            Pending Approval 상태일 경우 : pending 클래스가 붙습니다.
+                            Rejected 상태일 경우 : rejected 클래스가 붙습니다.
+                        -->
+                        <div class="state confirmed">Confirmed</div>
+                        <!-- <div class="state pending">Pending Approval</div> -->
+                        <!-- <div class="state rejected">Rejected</div> -->
+                    </a>
+                </dt>
+                <dd>
+                    <div class="event-item">
+                        <div class="tit-wrap">
+                            <strong class="cm-tit">SFF</strong>
+                            <p class="date">27 June, 2023</p>
+                        </div>
+                        <ul class="event-list col-01">
+                            <li>
+                                <div class="inner">
+                                    <p class="cm-txt ellipsis bold">All day</p>
+                                    <p class="cm-txt ellipsis-2">You&apos;ll be able to attend all sessions of SFF.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="event-item">
+                        <div class="tit-wrap">
+                            <strong class="cm-tit">SAFE</strong>
+                            <p class="date">28 June, 2023</p>
+                        </div>
+                        <ul class="event-list">
+                            <li>
+                                <div class="inner cm-txt">
+                                    <p class="cm-txt ellipsis bold">10:00~12:45</p>
+                                    <p class="cm-txt ellipsis-2">Common Session</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="inner cm-txt">
+                                    <p class="cm-txt ellipsis bold">13:00~15:55</p>
+                                    <p class="cm-txt ellipsis-2">Advanced Technology Enablement</p>
+                                    <p class="cm-txt-sm ellipsis m-ellipsis-2">Imperial Ballroom</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </dd>
+            </dl>
+            <!-- // Session -->
+
+            <!-- Location -->
+            <dl class="item country-item location" data-country="us">
+                <dt>
+                    <a href="#" onclick="return false;" class="item-trigger">
+                        <h3 class="tit">Location</h3>
+                        <p class="sub-txt">
+                            <span>Signia by Hilton San Jose</span>
+                        </p>
+                    </a>
+                </dt>
+                <dd>
+                    <p class="cm-tit ellipsis m-ellipsis-3">Signia by Hilton San Jose</p>
+                    <p class="cm-txt ellipsis-2 bold m-ellipsis-6">170 S Market St, San Jose, USA, 95113, CA</p>
+                    <p class="cm-txt ellipsis m-ellipsis-3">+1 408-998-1900</p>
+                    <div class="location-map">
+                        <div class="api-address">37.333324521323405,-121.88878182393724,15,Signia by Hilton San Jose</div>
+                        <div class="api-map map" id="locationMap"></div>
+                        <div class="view">
+                            <picture>
+                                <source media="(min-width: 768px)"srcset="./images/location_02_pc.jpg">
+                                <source media="(min-width: 0px) and (max-width: 767px)" srcset="./images/location_02_mo%402x.jpg">
+                                <img src="./images/location_02_pc.jpg" alt="">
+                            </picture>
+                        </div>
+                    </div>
+                </dd>
+            </dl>
+            <!-- // Location -->
+
+            <!-- Accommodation -->
+            <dl class="item country-item accommodation" data-country="us">
+                <dt>
+                    <a href="#" onclick="return false;" class="item-trigger">
+                        <h3 class="tit">Accommodation</h3>
+                    </a>
+                </dt>
+                <dd>
+                    <div class="api-address">37.333302,-121.888764,11.3,Signia by Hilton San Jose</div>
+                    <div class="api-map map api-high" id="accommodationMap"></div>
+                    <ul class="accommodation-list">
+                        <!-- 할인코드 (Special Rate)를 제공하는 호텔의 경우 li에 special 클래스가 붙습니다  -->
+                        <li class="special">   
+                            <div class="txt-wrap country-con">
+                                <div class="txt-inner">
+                                    <p class="cm-txt-sm ellipsis bk">Hotel in venue</p>
+                                    <h4 class="cm-tit ellipsis m-ellipsis-2">Signia by Hilton San Jose</h4>
+                                    <p class="cm-txt-sm ellipsis m-ellipsis-2">170 South Market Street, San Jose, CA 95113, United States</p>
+                                    <a href="https://www.hilton.com/en/hotels/sjcsmsa-signia-san-jose/" class="cm-txt bold website-btn" target="_blank">Go to the hotel website</a>
+                                </div>
+                                <p class="contact-txt">If you wish to receive special discounts, please contact <a href="mailto:info@samsungfoundryevent.com">info@samsungfoundryevent.com</a></p>
+                            </div>
+                            <picture>
+                                <source media="(min-width: 768px)"srcset="./images/accommodation_01_pc.jpg">
+                                <source media="(min-width: 0px) and (max-width: 767px)" srcset="./images/accommodation_01_mo%402x.jpg">
+                                <img src="./images/accommodation_01_pc.jpg" alt="">
+                            </picture>
+                        </li>
+                        <li>
+                            <div class="txt-wrap">
+                                <div class="txt-inner">
+                                    <p class="cm-txt-sm ellipsis bk">Within 640m of the venue</p>
+                                    <h4 class="cm-tit ellipsis m-ellipsis-2">Hotel De Anza - Destination by Hyatt</h4>
+                                    <p class="cm-txt-sm ellipsis m-ellipsis-2">233 W Santa Clara St, San Jose, CA 95113, United States</p>
+                                    <a href="https://www.hyatt.com/en-US/hotel/california/hotel-de-anza/sjcdh?src=adm_sem_crp_chico_crp_ppc_NAM-UnitedStates-CA-SanJose-DN-SJCDH_google_Evergreen2022_e_hotel%20de%20anza&gclid=CjwKCAjwoIqhBhAGEiwArXT7K_vT-k2coB3oLhV9n6aXg_vmcJQ_KqCgLIufE89yDb9d_jXZa2YebRoC4E4QAvD_BwE" class="cm-txt bold website-btn" target="_blank">Go to the hotel website</a>
+                                </div>
+                            </div>
+                            <picture>
+                                <source media="(min-width: 768px)"srcset="./images/accommodation_02_pc.jpg">
+                                <source media="(min-width: 0px) and (max-width: 767px)" srcset="./images/accommodation_02_mo%402x.jpg">
+                                <img src="./images/accommodation_02_pc.jpg" alt="">
+                            </picture>
+                        </li>
+                        <li>
+                            <div class="txt-wrap">
+                                <div class="txt-inner">
+                                    <p class="cm-txt-sm ellipsis bk">Within 960m of the venue</p>
+                                    <h4 class="cm-tit ellipsis m-ellipsis-2">The Westin San Jose</h4>
+                                    <p class="cm-txt-sm ellipsis m-ellipsis-2">302 S Market St, San Jose, CA 95113, United States</p>
+                                    <a href="https://www.marriott.com/en-us/hotels/sjcwi-the-westin-san-jose/overview/" class="cm-txt bold website-btn" target="_blank">Go to the hotel website</a>
+                                </div>
+                            </div>
+                            <picture>
+                                <source media="(min-width: 768px)"srcset="./images/accommodation_03_pc.jpg">
+                                <source media="(min-width: 0px) and (max-width: 767px)" srcset="./images/accommodation_03_mo%402x.jpg">
+                                <img src="./images/accommodation_03_pc.jpg" alt="">
+                            </picture>
+                        </li>
+                        <li>
+                            <div class="txt-wrap">
+                                <div class="txt-inner">
+                                    <p class="cm-txt-sm ellipsis bk">Within 7.7km of the venue</p>
+                                    <h4 class="cm-tit ellipsis m-ellipsis-2">Hotel Valencia Santana Row</h4>
+                                    <p class="cm-txt-sm ellipsis m-ellipsis-2">355 Santana Row, San Jose, CA 95128, United States</p>
+                                    <a href="https://www.hotelvalencia-santanarow.com/" class="cm-txt bold website-btn" target="_blank">Go to the hotel website</a>
+                                </div>
+                            </div>
+                            <picture>
+                                <source media="(min-width: 768px)"srcset="./images/accommodation_04_pc.jpg">
+                                <source media="(min-width: 0px) and (max-width: 767px)" srcset="./images/accommodation_04_mo%402x.jpg">
+                                <img src="./images/accommodation_04_pc.jpg" alt="">
+                            </picture>
+                        </li>
+                        <li>
+                            <div class="txt-wrap">
+                                <div class="txt-inner">
+                                    <p class="cm-txt-sm ellipsis bk">Within 10.7km of the venue</p>
+                                    <h4 class="cm-tit ellipsis m-ellipsis-2">Hayes Mansion San Jose, Curio Collection by Hilton</h4>
+                                    <p class="cm-txt-sm ellipsis m-ellipsis-2">200 Edenvale Ave, San Jose, CA 95136, United States</p>
+                                    <a href="https://www.hayesmansion.com/" class="cm-txt bold website-btn" target="_blank">Go to the hotel website</a>
+                                </div>
+                            </div>
+                            <picture>
+                                <source media="(min-width: 768px)"srcset="./images/accommodation_05_pc.jpg">
+                                <source media="(min-width: 0px) and (max-width: 767px)" srcset="./images/accommodation_05_mo%402x.jpg">
+                                <img src="./images/accommodation_05_pc.jpg" alt="">
+                            </picture>
+                        </li>
+                    </ul>
+                </dd>
+            </dl>
+            <!-- // Accommodation -->
+
+            <!-- Transportation & Parking -->
+            <dl class="item country-item transportation" data-country="us">
+                <dt>
+                    <a href="#" onclick="return false;" class="item-trigger">
+                        <h3 class="tit">Transportation & Parking</h3>
+                    </a>
+                </dt>
+                <dd>
+                    <div class="map">
+                        <picture>
+                            <source media="(min-width: 768px)"srcset="./images/transportation_01_pc.jpg">
+                            <source media="(min-width: 0px) and (max-width: 767px)" srcset="./images/transportation_01_mo%402x.jpg">
+                            <img src="./images/transportation_01_pc.jpg" alt="">
+                        </picture>
+                    </div>
+                    <div class="trans-detail">
+                        <div class="detail-item">
+                            <h4 class="cm-tit">By car</h4>
+                            <ul class="num-txt cm-txt">
+                                <li><em>1.</em>Navigate to “Signia by Hilton San Jose.”</li>
+                                <li><em>2.</em>There is limited valet parking at the Signia.</li>
+                                <li><em>3.</em>Free parking sponsored by Samsung is available on a first-come, first-served basis at:</li>
+                            </ul>
+                        </div>
+                        <div class="detail-item parking-detail">
+                            <h4 class="cm-tit">Parking Lots</h4>
+                            <div class="map">
+                                <picture>
+                                    <source media="(min-width: 768px)"srcset="./images/transportation_02_pc.jpg">
+                                    <source media="(min-width: 0px) and (max-width: 767px)" srcset="./images/transportation_02_mo%402x.jpg">
+                                    <img src="./images/transportation_02_pc.jpg" alt="">
+                                </picture>
+                            </div>
+                            <ul class="parking-list">
+                                <li>
+                                    <strong class="cm-txt bold">Option 1: 285 S. Market St.</strong>
+                                    <p class="cm-txt">0.2 miles / 3-minute walk</p>
+                                    <p class="cm-txt">125 spaces</p>
+                                </li>
+                                <li>
+                                    <strong class="cm-txt bold">Option 2: 8 E. San Fernando St.</strong>
+                                    <p class="cm-txt">0.2 miles / 4-minute walk</p>
+                                    <p class="cm-txt">120 spaces</p>
+                                </li>
+                                <li>
+                                    <strong class="cm-txt bold">Option 3: 143 S. 3rd St.</strong>
+                                    <p class="cm-txt">0.3 miles / 6-minute walk</p>
+                                    <p class="cm-txt">135 spaces</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="detail-item">
+                            <h4 class="cm-tit">Alternate options</h4>
+                            <p class="cm-txt">Rideshare services such as <a href="https://www.uber.com/us/en/ride/" target="_blank">Uber</a> or <a href="https://www.lyft.com/" target="_blank">Lyft</a>.</p>
+                        </div>
+                    </div>
+                </dd>
+            </dl>
+            <!-- // Transportation & Parking -->
+
+            <!-- Dinner -->
+            <dl class="item country-item diner" data-country="us">
+                <dt>
+                    <a href="#" onclick="return false;" class="item-trigger">
+                        <h3 class="tit">Dinner</h3>
+                    </a>
+                </dt>
+                <dd>
+                    <div class="dinner-item">
+                        <p class="cm-tit ellipsis m-ellipsis-3">[SFF 2023] Signia by Hilton San Jose</p>
+                        <p class="cm-txt ellipsis-2 bold m-ellipsis-6">Signia by Hilton San Jose 1F Club Regent Room</p>
+                        <p class="cm-txt ellipsis"><span>27 June, 2023</span><span>17:30 - 19:30</span></p>
+                        <p class="cm-txt-sm ellipsis m-ellipsis-3">+1 408-998-1900</p>
+                        <div class="location-map">
+                            <div class="api-address">37.33337064795287,-121.88875307250515,15,Signia by Hilton San Jose</div>
+                            <div class="api-map map" id="dinnerMap"></div>
+                        </div>
+                    </div>
+                    <div class="dinner-item">
+                        <p class="cm-tit ellipsis m-ellipsis-3">[SAFE 2023] Morton's The Steakhouse</p>
+                        <p class="cm-txt ellipsis-2 bold m-ellipsis-6">170 S Market St, San Jose, CA 95113</p>
+                        <p class="cm-txt ellipsis"><span>28 June, 2023</span><span>17:00 - 19:00</span></p>
+                        <p class="cm-txt-sm ellipsis m-ellipsis-3">+1 408-998-1900</p>
+                        <div class="location-map">
+                            <div class="api-address">37.33225543854977,-121.88891971725816,15,Morton's The Steakhouse</div>
+                            <div class="api-map map" id="dinnerMap02"></div>
+                        </div>
+                    </div>
+                </dd>
+            </dl>
+            <!-- // Dinner -->
+
+            <!-- Session -->
+            <dl class="item country-item session" data-country="kr">
+                <dt>
+                    <a href="#" onclick="return false;" class="item-trigger">
+                        <h3 class="tit">Session</h3>
+                        <p class="sub-txt">
+                            <span>Seoul</span>
+                            <span>SFF, SAFE</span>
+                        </p>
+                        <!-- 
+                            승인상태에 따라 state 클래스 뒤에 다른 클래스가 붙습니다.
+                            Confirmed 상태일 경우 : confirmed 클래스
+                            Pending Approval 상태일 경우 : pending 클래스가 붙습니다.
+                            Rejected 상태일 경우 : rejected 클래스가 붙습니다.
+                        -->
+                        <div class="state confirmed">Confirmed</div>
+                        <!-- <div class="state pending">Pending Approval</div> -->
+                        <!-- <div class="state rejected">Rejected</div> -->
+                    </a>
+                </dt>
+                <dd>
+                    <div class="event-item">
+                        <div class="tit-wrap">
+                            <strong class="cm-tit">SFF</strong>
+                            <p class="date">27 June, 2023</p>
+                        </div>
+                        <ul class="event-list col-01">
+                            <li>
+                                <div class="inner">
+                                    <p class="cm-txt ellipsis bold">All day</p>
+                                    <p class="cm-txt ellipsis-2">You&apos;ll be able to attend all sessions of SFF.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="event-item">
+                        <div class="tit-wrap">
+                            <strong class="cm-tit">SAFE</strong>
+                            <p class="date">28 June, 2023</p>
+                        </div>
+                        <ul class="event-list">
+                            <li>
+                                <div class="inner cm-txt">
+                                    <p class="cm-txt ellipsis bold">10:00~12:45</p>
+                                    <p class="cm-txt ellipsis-2">Common Session</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="inner cm-txt">
+                                    <p class="cm-txt ellipsis bold">13:00~15:55</p>
+                                    <p class="cm-txt ellipsis-2">Advanced Technology Enablement</p>
+                                    <p class="cm-txt-sm ellipsis m-ellipsis-2">Imperial Ballroom</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </dd>
+            </dl>
+            <!-- // Session -->
+
+            <!-- Location -->
+            <dl class="item country-item location" data-country="kr">
+                <dt>
+                    <a href="#" onclick="return false;" class="item-trigger">
+                        <h3 class="tit">Location</h3>
+                        <p class="sub-txt">
+                            <span>COEX Auditorium</span>
+                        </p>
+                    </a>
+                </dt>
+                <dd>
+                    <p class="cm-tit ellipsis m-ellipsis-3">COEX Auditorium</p>
+                    <p class="cm-txt ellipsis-2 bold m-ellipsis-6">513, Yeongdong-daero, Gangnam-gu, Seoul 06164 Republic of Korea</p>
+                    <p class="cm-txt ellipsis m-ellipsis-3">+82 2-6000-0114</p>
+                    <div class="location-map">
+                        <div class="api-address">37.510363, 127.058587,15,COEX Auditorium</div>
+                        <div class="api-map map" id="locationMapKr"></div>
+                        <div class="view">
+                            <picture>
+                                <source media="(min-width: 768px)"srcset="./images/location_02_pc_kr.jpg">
+                                <source media="(min-width: 0px) and (max-width: 767px)" srcset="./images/location_02_mo_kr%402x.jpg">
+                                <img src="./images/location_02_pc_kr.jpg" alt="">
+                            </picture>
+                        </div>
+                    </div>
+                </dd>
+            </dl>
+            <!-- // Location -->
+
+            <!-- Accommodation -->
+            <dl class="item country-item accommodation" data-country="kr">
+                <dt>
+                    <a href="#" onclick="return false;" class="item-trigger">
+                        <h3 class="tit">Accommodation</h3>
+                    </a>
+                </dt>
+                <dd>
+                    <div class="api-address">37.510219, 127.058604,14.9,Intercontinental Seoul Coex</div>
+                    <div class="api-map map api-high" id="accommodationMapKr"></div>
+                    <ul class="accommodation-list">
+                        <li>
+                            <div class="txt-wrap">
+                                <div class="txt-inner">
+                                    <p class="cm-txt-sm ellipsis bk">Hotel in venue</p>
+                                    <h4 class="cm-tit ellipsis m-ellipsis-2">InterContinental Seoul Coex</h4>
+                                    <p class="cm-txt-sm ellipsis m-ellipsis-2">524, Bongeunsa-ro, Gangnam-gu, Seoul, Republic of Korea</p>
+                                    <a href="https://seoul.intercontinental.com/iccoex/eng/" class="cm-txt bold website-btn" target="_blank">Go to the hotel website</a>
+                                </div>
+                            </div>
+                            <picture>
+                                <source media="(min-width: 768px)"srcset="./images/accommodation_01_pc_kr.jpg">
+                                <source media="(min-width: 0px) and (max-width: 767px)" srcset="./images/accommodation_01_mo_kr%402x.jpg">
+                                <img src="./images/accommodation_01_pc_kr.jpg" alt="">
+                            </picture>
+                        </li>
+                        <li>
+                            <div class="txt-wrap">
+                                <div class="txt-inner">
+                                    <p class="cm-txt-sm ellipsis bk">Within 400m of the venue</p>
+                                    <h4 class="cm-tit ellipsis m-ellipsis-2">Oakwood Premier Coex Center Seoul</h4>
+                                    <p class="cm-txt-sm ellipsis m-ellipsis-2">46, Teheran-ro 87-gil, Gangnam-gu, Seoul, Republic of Korea</p>
+                                    <a href="https://www.oakwoodpremier.co.kr/front2/en/opcc" class="cm-txt bold website-btn" target="_blank">Go to the hotel website</a>
+                                </div>
+                            </div>
+                            <picture>
+                                <source media="(min-width: 768px)"srcset="./images/accommodation_02_pc_kr.jpg">
+                                <source media="(min-width: 0px) and (max-width: 767px)" srcset="./images/accommodation_02_mo_kr%402x.jpg">
+                                <img src="./images/accommodation_02_pc_kr.jpg" alt="">
+                            </picture>
+                        </li>
+                        <li>
+                            <div class="txt-wrap">
+                                <div class="txt-inner">
+                                    <p class="cm-txt-sm ellipsis bk">Within 550m of the venue</p>
+                                    <h4 class="cm-tit ellipsis m-ellipsis-2">Grand InterContinental Seoul Parnas</h4>
+                                    <p class="cm-txt-sm ellipsis m-ellipsis-2">521, Teheran-ro, Gangnam-gu, Seoul, Republic of Korea</p>
+                                    <a href="https://seoul.intercontinental.com/grandicparnas/eng/" class="cm-txt bold website-btn" target="_blank">Go to the hotel website</a>
+                                </div>
+                            </div>
+                            <picture>
+                                <source media="(min-width: 768px)"srcset="./images/accommodation_03_pc_kr.jpg">
+                                <source media="(min-width: 0px) and (max-width: 767px)" srcset="./images/accommodation_03_mo_kr%402x.jpg">
+                                <img src="./images/accommodation_03_pc_kr.jpg" alt="">
+                            </picture>
+                        </li>
+                        <li>
+                            <div class="txt-wrap">
+                                <div class="txt-inner">
+                                    <p class="cm-txt-sm ellipsis bk">Within 600m of the venue</p>
+                                    <h4 class="cm-tit ellipsis m-ellipsis-2">Hotel in 9</h4>
+                                    <p class="cm-txt-sm ellipsis m-ellipsis-2">618, Yeongdong-daero, Gangnam-gu, Seoul, Republic of Korea</p>
+                                    <a href="https://www.hotelin9.com/" class="cm-txt bold website-btn" target="_blank">Go to the hotel website</a>
+                                </div>
+                            </div>
+                            <picture>
+                                <source media="(min-width: 768px)"srcset="./images/accommodation_04_pc_kr.jpg">
+                                <source media="(min-width: 0px) and (max-width: 767px)" srcset="./images/accommodation_04_mo_kr%402x.jpg">
+                                <img src="./images/accommodation_04_pc_kr.jpg" alt="">
+                            </picture>
+                        </li>
+                        <li>
+                            <div class="txt-wrap">
+                                <div class="txt-inner">
+                                    <p class="cm-txt-sm ellipsis bk">Within 1.1km of the venue</p>
+                                    <h4 class="cm-tit ellipsis m-ellipsis-2">Park Hyatt Seoul</h4>
+                                    <p class="cm-txt-sm ellipsis m-ellipsis-2">606, Teheran-ro, Gangnam-gu, Seoul, Republic of Korea</p>
+                                    <a href="https://www.hyatt.com/en-US/hotel/south-korea/park-hyatt-seoul/selph/offers?src=adm_sem_agn_pfx_corp_apac_other_PFX_Search_Google_ASPAC_ASPAC_SELPH_BR_AO_KR_EN_SELPH_BR_Exact_Brand_KR_EN_Park+Hyatt+Seoul&&&gclid=CjwKCAjwoIqhBhAGEiwArXT7K4XSfGXzj7hzBiCPALJnl21Wu7zuv_5cDzSH1VAmT6WOM-JAiqNk5xoCQrUQAvD_BwE&gclsrc=aw.ds" class="cm-txt bold website-btn" target="_blank">Go to the hotel website</a>
+                                </div>
+                            </div>
+                            <picture>
+                                <source media="(min-width: 768px)"srcset="./images/accommodation_05_pc_kr.jpg">
+                                <source media="(min-width: 0px) and (max-width: 767px)" srcset="./images/accommodation_05_mo_kr%402x.jpg">
+                                <img src="./images/accommodation_05_pc_kr.jpg" alt="">
+                            </picture>
+                        </li>
+                    </ul>
+                </dd>
+            </dl>
+            <!-- // Accommodation -->
+
+            <!-- Transportation & Parking -->
+            <dl class="item country-item transportation" data-country="kr">
+                <dt>
+                    <a href="#" onclick="return false;" class="item-trigger">
+                        <h3 class="tit">Transportation & Parking</h3>
+                    </a>
+                </dt>
+                <dd>
+                    <div class="map">
+                        <picture>
+                            <source media="(min-width: 768px)"srcset="./images/transportation_01_pc_kr.jpg">
+                            <source media="(min-width: 0px) and (max-width: 767px)" srcset="./images/transportation_01_mo_kr%402x.jpg">
+                            <img src="./images/transportation_01_pc_kr.jpg" alt="">
+                        </picture>
+                    </div>
+                    <div class="trans-detail">
+                        <div class="detail-item">
+                            <h4 class="cm-tit">By car</h4>
+                            <ul class="num-txt cm-txt">
+                                <li><em>1.</em>Navigate to “COEX Auditorium.”</li>
+                                <li><em>2.</em>Parking lot is located at the corner across Bongeunsa Temple</li>
+                                <li><em>3.</em>Enter by turning right from Samseong Station, or turn left from Bongeunsa Temple then make a U-turn</li>
+                            </ul>
+                        </div>
+                        <div class="detail-item">
+                            <h4 class="cm-tit">By public transportation</h4>
+                            <div class="item-sec">
+                                <strong class="cm-txt bold">Subway Line 9, Bongeunsa Station</strong>
+                                <p class="cm-txt">After entering COEX Mall through the underground passage at Exit 7, walk for approximately 5 minutes in the direction of the Aquarium</p>
+                            </div>
+                            <div class="item-sec">
+                                <strong class="cm-txt bold">Subway Line 2, Samseong Station</strong>
+                                <p class="cm-txt">After entering COEX Mall through the underground passage at Exit 5, walk for approximately 10 minutes in the direction of Megabox Cinema</p>
+                            </div>                                        
+                        </div>
+                        <div class="detail-item">
+                            <h4 class="cm-tit">Using public transport from the airport</h4>
+                            <p class="cm-txt">Take Airport Bus 6103 from the ground floor of T1, Incheon International Airport and get off at Bongeunsa Station (takes approximately 1 hour and 10 minutes)
+                                After getting off, walk toward COEX (takes approximately 10 minutes)</p>
+                        </div>
+                    </div>
+                </dd>
+            </dl>
+            <!-- // Transportation & Parking -->
+
+            <!-- Dinner -->
+            <dl class="item country-item diner" data-country="kr">
+                <dt>
+                    <a href="#" onclick="return false;" class="item-trigger">
+                        <h3 class="tit">Dinner</h3>
+                    </a>
+                </dt>
+                <dd>
+                    <div class="dinner-item">
+                        <p class="cm-tit ellipsis m-ellipsis-3">Intercontinental Parnas</p>
+                        <p class="cm-txt ellipsis-2 bold m-ellipsis-6">521, Bongeunsa-ro, Gangnam-gu, Seoul, Republic of Korea</p>
+                        <p class="cm-txt ellipsis"><span>17:30 - 19:30</span></p>
+                        <p class="cm-txt-sm ellipsis m-ellipsis-3">+82 2-3452-2500</p>
+                        <div class="location-map">
+                            <div class="api-address">37.509114,127.060858,15,Intercontinental Parnas</div>
+                            <div class="api-map map" id="dinnerMapKr"></div>
+                        </div>
+                    </div>
+                </dd>
+            </dl>
+            <!-- // Dinner -->
+            <!-- // 등록 국가 이벤트정보 영역 -->
+
+            <!-- 공지사항 영역 -->
+            <div class="notice-con">
+                <div class="notice-inner">
+                    <h3 class="tit">Notice</h3>
+                    <ul class="notice-list">
+                        <!-- 2023.06.07. : 공지 팝업 내 '공지사항 자세히보기' 버튼 클릭시 스크롤 이동을 위해 li에 id 값 부여  -->
+                        <li id="NoticeContents1">
+                            <p class="cm-txt ellipsis">
+                                <span>2023. 00. 00</span>
+                                <span>US, EMEA</span>
+                            </p>
+                            <p class="cm-tit ellipsis m-ellipsis-3">[SFF 2023] Entry QR Information</p>
+                            <p class="notice-txt">The 2023 SAFE venue has been changed from Vivace to Harmony Ballroom.</p>
+                            <picture>
+                                <source media="(min-width: 768px)"srcset="./images/notice_01_pc.png">
+                                <source media="(min-width: 0px) and (max-width: 767px)" srcset="./images/notice_01_mo%402x.png">
+                                <img src="./images/notice_01_pc.png" alt="">
+                            </picture>
+                        </li>
+                        <li id="NoticeContents2">
+                            <p class="cm-txt ellipsis">
+                                <span>2023. 00. 00</span>
+                                <span>KR</span>
+                            </p>
+                            <p class="cm-tit ellipsis m-ellipsis-3">[SFF 2023] Title</p>
+                            <p class="notice-txt">The 2023 SAFE venue has been changed from Vivace to Harmony Ballroom.</p>
+                            <picture>
+                                <source media="(min-width: 768px)"srcset="./images/notice_02_pc.png">
+                                <source media="(min-width: 0px) and (max-width: 767px)" srcset="./images/notice_02_mo%402x.png">
+                                <img src="./images/notice_02_pc.png" alt="">
+                            </picture>
+                        </li>
+                        <li id="NoticeContents3">
+                            <p class="cm-txt ellipsis">
+                                <span>2023. 00. 00</span>
+                                <span>US, EMEA</span>
+                            </p>
+                            <p class="cm-tit ellipsis m-ellipsis-3">[US, EMEA] Venue information</p>
+                            <p class="notice-txt">The 2023 SAFE venue has been changed from Vivace to Harmony Ballroom. The 2023 SAFE venue has been changed from Vivace to Harmony Ballroom. The 2023 SAFE venue has been changed from Vivace to Harmony Ballroom.</p>
+                        </li>
+                        <li>
+                            <p class="cm-txt ellipsis">
+                                <span>2023. 00. 00</span>
+                                <span>US, EMEA</span>
+                            </p>
+                            <p class="cm-tit ellipsis m-ellipsis-3">[US, EMEA] Venue information</p>
+                            <p class="notice-txt">The 2023 SAFE venue has been changed from Vivace to Harmony Ballroom. The 2023 SAFE venue has been changed from Vivace to Harmony Ballroom. The 2023 SAFE venue has been changed from Vivace to Harmony Ballroom.</p>
+                        </li>
+                        <li>
+                            <p class="cm-txt ellipsis">
+                                <span>2023. 00. 00</span>
+                                <span>US, EMEA</span>
+                            </p>
+                            <p class="cm-tit ellipsis m-ellipsis-3">[US, EMEA] Venue information</p>
+                            <p class="notice-txt">The 2023 SAFE venue has been changed from Vivace to Harmony Ballroom. The 2023 SAFE venue has been changed from Vivace to Harmony Ballroom. The 2023 SAFE venue has been changed from Vivace to Harmony Ballroom.</p>
+                        </li>
+                        <li>
+                            <p class="cm-txt ellipsis">
+                                <span>2023. 00. 00</span>
+                                <span>US, EMEA</span>
+                            </p>
+                            <p class="cm-tit ellipsis m-ellipsis-3">[US, EMEA] Venue information</p>
+                            <p class="notice-txt">The 2023 SAFE venue has been changed from Vivace to Harmony Ballroom. The 2023 SAFE venue has been changed from Vivace to Harmony Ballroom. The 2023 SAFE venue has been changed from Vivace to Harmony Ballroom.</p>
+                        </li>
+                        <li>
+                            <p class="cm-txt ellipsis">
+                                <span>2023. 00. 00</span>
+                                <span>US, EMEA</span>
+                            </p>
+                            <p class="cm-tit ellipsis m-ellipsis-3">[US, EMEA] Venue information</p>
+                            <p class="notice-txt">The 2023 SAFE venue has been changed from Vivace to Harmony Ballroom. The 2023 SAFE venue has been changed from Vivace to Harmony Ballroom. The 2023 SAFE venue has been changed from Vivace to Harmony Ballroom.</p>
+                        </li>
+                    </ul>
+                    <button type="button" class="basic-btn light-bg btn-notice-more">Learn more</button>
+                </div>
+            </div>
+            <!-- // 공지사항 영역 -->
+
+
+            <!-- popup -->
+            <div class="popup-wrap">
+                <div class="dimmed"></div>
+                <div class="popup-detail">
+                    <ul>
+                        <!-- Logout 팝업 -->
+                        <li class="pop-sm" data-index="01">
+                            <div class="pop-inner">
+                                <h3 class="pop-tit">Logout</h3>
+                                <p class="pop-desc">Are you sure you want to logout?</p>
+                            </div>
+                            <div class="btn-wrap col-02">
+                                <button class="btn-close gray" type="button">Cancel</button>
+                                <button class="btn-logout" type="button">Logout</button>
+                            </div>
+                        </li>
+                        <!-- // Logout 팝업 -->
+                        
+                        <!-- Edit Profile 팝업 -->
+                        <li data-index="02">
+                            <button class="btn-close icon " type="button"></button>
+                            <div class="pop-inner">
+                                <div class="modal-dim"></div>
+                                <h3 class="pop-tit big">Check and update <br>your registration information</h3>
+                                <p class="pop-desc sm">Please check the pre-registration infomation and <br>
+                                    modify the information if there is any change.</p>
+                                <form id="updateForm">
+                                    <fieldset>
+                                        <legend>Enter the your information</legend>
+                                        <div class="info-form">
+                                            <div class="info-item">
+                                                <input type="text" value="anonymous@anonymous.com" readonly>
+                                                <p class="notice">Make sure to enter your company email address, personal email addresses (Gmail, Outlook, etc.)</p>
+                                            </div>
+                                            <div class="info-item">
+                                                <input type="password" placeholder="Password">
+                                                <p class="notice blue">Please enter a new password to change your password, or else your old password will be kept.</p>
+                                                <p class="notice">Please enter your password 5 or more characters in length, containing at least on of the following: alphabet, numbers.</p>
+                                            </div>
+                                            <div class="info-item">
+                                                <input type="password" placeholder="Confirm Password">
+                                            </div>
+                                            <div class="info-item">
+                                                <div class="custom-select-con">
+                                                    <button class="select-trigger" type="button">
+                                                        <span class="select-txt">USA</span>	
+                                                    </button>
+                                                    <!-- 드롭다운 되는 select list -->
+                                                    <ul class="select-option-list">
+                                                        <li>
+                                                            <button type="button" class="select-option active">USA</button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="select-option">KR</button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="info-item-col2">
+                                                <div class="info-item">
+                                                    <input type="text" value="Jonathan">
+                                                </div>
+                                                <div class="info-item">
+                                                    <input type="text" value="Smith">
+                                                </div>
+                                            </div>
+                                            <div class="info-item-col2">
+                                                <div class="info-item">
+                                                    <input type="text" value="Anonymous corp.">
+                                                </div>
+                                                <div class="info-item">
+                                                    <div class="custom-select-con">
+                                                        <button class="select-trigger" type="button">
+                                                            <span class="select-txt">e-Commerce</span>	
+                                                        </button>
+                                                        <ul class="select-option-list">
+                                                            <li>
+                                                                <button type="button" class="select-option active">e-Commerce</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="select-option">e-Commerce2</button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="info-item-col2">
+                                                <div class="info-item">
+                                                    <div class="custom-select-con">
+                                                        <button class="select-trigger" type="button">
+                                                            <span class="select-txt">Sales & Marketing</span>	
+                                                        </button>
+                                                        <ul class="select-option-list">
+                                                            <li>
+                                                                <button type="button" class="select-option active">Sales & Marketing</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="select-option">Sales & Marketing</button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="info-item">
+                                                    <input type="text" value="Sales Manager">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="update-btn basic-btn light-bg disabled">Update</button>
+                                    </fieldset>
+                                </form>
+                                <div class="back__popup__wr">
+                                    <div class="inbox">
+                                        <div class="back__popup__box">
+                                            <p>
+                                                <b>Would you like to<br>leave this page?</b>
+                                                If you leave this page, the content you are creating <br class="hidden480">
+                                                will not be saved.
+                                            </p>
+                                            <div class="popup__btn__wr">
+                                                <a href="#" class="close__wr">Back</a>
+                                                <a href="#" class="back">Leave</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- // Edit Profile 팝업 -->
+        
+                        <!-- Get your QR 팝업 -->
+                        <li class="pop-sm" data-index="03">
+                            <!-- 다국가 이벤트 고객인 경우 사용될 팝업 -->
+                            <div class="region-select-con">
+                                <div class="region-con">
+                                    <div class="pop-inner">
+                                        <h3 class="pop-tit">Please select the region to send the QR code to.</h3>
+                                        <div class="region-radio">
+                                            <span class="radio">
+                                                <input type="radio" name="radioblue" id="us" checked />
+                                                <label for="us">US</label>
+                                            </span>
+                                            <span class="radio">
+                                                <input type="radio" name="radioblue" id="kr" />
+                                                <label for="kr">KR</label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="btn-wrap">
+                                        <button class="btn-qr" type="button">Send your QR</button>
+                                    </div>
+                                </div>
+                                <div class="confirm-con">
+                                    <div class="pop-inner">
+                                        <h3 class="pop-tit">Your QR code has been sent!</h3>
+                                        <p class="pop-desc">A QR code has sent to AAA@sansungds,com. <br>
+                                        Please Check your email.</p>
+                                    </div>
+                                    <div class="btn-wrap">
+                                        <button class="btn-close" type="button">Confirm</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 단일국가 이벤트 고객인 경우 사용될 팝업내용 -->
+                            <div class="confirm-con" style="display:none">
+                                <div class="pop-inner">
+                                    <h3 class="pop-tit">Your QR code has been sent!</h3>
+                                    <p class="pop-desc">A QR code has sent to AAA@sansungds,com. <br>
+                                    Please Check your email.</p>
+                                </div>
+                                <div class="btn-wrap">
+                                    <button class="btn-close" type="button">Confirm</button>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- // Get your QR 팝업 -->
+
+
+                        <!-- Additional Registration 팝업 -->
+                        <li class="pop-regi" data-index="04">
+                            <div class="pop-inner">
+                                <div class="modal-dim"></div>
+                                <div id="wrapper" class="login">
+                                    <div class="regi__container">
+                                        <div class="regi__contents__wr regi__step01__wr">
+                                            <!-- 3. 국가선택 -->
+                                            <section class="regi__step01_box regi-step step02" data-regi-step="2">
+                                                <button class="btn-close icon" type="button"></button>
+                                                <div class="regi__form__box regi__form__01">
+                                                    <h3 class="title">Select region you want to <br>participate in</h3>
+                                                </div>
+                                                <ul class="clearfix btn__regi__wr">
+
+                                                    <!-- 
+                                                        가입을 완료한 국가인 경우 a 태그에 disabled 클래스가 붙도록 작업 요청드립니다.
+
+                                                        us 예시
+                                                        <li class="regi__list regi__list01">
+                                                        <a href="#none" data-step-country="us" data-step="next" class="disabled">
+                                                            <span class="mark"></span>
+                                                            <span class="ftw500">San Jose, US</span>
+                                                        </a>
+                                                    </li>
+                                                     -->
+                                                    <li class="regi__list regi__list01">
+                                                        <a href="#none" data-step-country="us" data-step="next">
+                                                            <span class="mark"></span>
+                                                            <span class="ftw500">San Jose, US</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="regi__list regi__list02">
+                                                        <a href="#none" data-modal-name='EMEA'>
+                                                            <span class="mark"></span>
+                                                            <span class="ftw500">Munich, EMEA</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="regi__list regi__list03">
+                                                        <a href="#none" data-modal-name='Japan'>
+                                                            <span class="mark"></span>
+                                                            <span class="ftw500">Tokyo, JP</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="regi__list regi__list04">
+                                                        <a href="#none" data-step-country="kr" data-step="next"> 
+                                                            <span class="mark"></span>
+                                                            <span class="ftw500">Seoul, KR</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="regi__list regi__list05">
+                                                        <a href="#none" data-modal-name='China, EMEA'>
+                                                            <span class="mark"></span>
+                                                            <span class="ftw500">China, Virtual</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <div class="coming__popup__wr coming__popup__wr01">
+                                                    <div class="inbox">
+                                                        <div class="coming__popup__box">
+                                                            <p>
+                                                                <b>See you soon</b>
+                                                                <span class="coming_msg">Registration page for <span class='name'></span> will be open soon.</span>
+                                                            </P>
+                                                            <div class="popup__btn__wr">
+                                                                <a href="javascript:void(0);" class="close__wr">Confirm</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <!-- // 3. 국가선택 -->
+
+                                            <!-- 4. 이벤트/세션 선택 :: US -->
+                                            <section class="regi-step step03 step-session" data-step-country="us" data-regi-step="3">
+                                                <button class="btn-prev icon" type="button"></button>
+                                                <button class="btn-close btn-leave icon" type="button"></button>
+                                                <div class="us-session">
+                                                    <section class="regi__form__box regi__form__01">
+                                                        <h3 class="title">Select forum you want to <br>participate in </h3>
+                                                        <p class="text">
+                                                            Registration is mandatory for<br class="m_only"> Samsung Foundry Forum visitors and partners.<br>
+                                                            Please fill in the information only in English<br class="m_only"> and click 'Submit'.<br>
+                                                            If you fail to register or have any questions,<br class="m_only"> please contact <a href="mailto:info@samsungfoundryevent.com">info@samsungfoundryevent.com</a>
+                                                        </p>
+                                                    </section>
+                                
+                                                    <section class="regi__form__box regi__form__02">
+                                                        <h3 class="tit">Forum to participate*</h3>
+                                                        <form>
+                                                            <ul class="btn__regi__wr">
+                                                                <li class="regi__day__list regi__day__list01">
+                                                                    <input type="radio" name="participate_day_us" id="parti_option01_us" data-radio-type='none' value="SFF" class="regi-input" checked>
+                                                                    <label for="parti_option01_us"><span></span><p>Day 1 : SFF</p></label>
+                                                                </li>
+                                                                <li class="regi__day__list regi__day__list02">
+                                                                    <input type="radio" name="participate_day_us" id="parti_option02_us" data-radio-type='option' data-id="parti_option02_us" value="SAFE™ Forum" class="regi-input">
+                                                                    <label for="parti_option02_us"><span></span><p>Day 2 : SAFE™ Forum</p></label>
+                                                                </li>
+                                                                <li class="regi__day__list regi__day__list03">
+                                                                    <input type="radio" name="participate_day_us" id="parti_option03_us" data-radio-type='option' data-id="parti_option03_us" value="SFF & SAFE™ Forum" class="regi-input">
+                                                                    <label for="parti_option03_us"><span></span><p>Day 1 - 2 : SFF & SAFE™ Forum</p></label>
+                                                                </li>
+                                                            </ul>
+                                                        </form>
+                                                        
+                                                        <!-- Day 2 : SAFE™ Forum -->
+                                                        <form action="" id="form1" name="form1" data-id="parti_option02_us" class="day_form">
+                                                            <div class="popup__wr" >
+                                                                <div class="regi__time__box">
+                                                                    <p class="text fc-gr">
+                                                                        <b>Choose the Session</b>
+                                                                        You can choose to participate in Day 2 : SAFE™ Forum, please check a session of interest
+                                                                    </p>
+                                                                    <div class="session-item">
+                                                                        <strong class="tit-time">10:00~12:45</strong>
+                                                                        <div class="regi__time__list">
+                                                                            <input type="radio" name="safe_common" id="safe_common" value="Common Session" checked disabled>
+                                                                            <label for="safe_common"><span></span><p>Common Session</p></label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="session-item">
+                                                                        <strong class="tit-time">13:00~15:55</strong>
+                                                                        <ul>
+                                                                            <li class="regi__time__list custom-item">
+                                                                                <input type="radio" name="safe_time" id="safe_time01" checked>
+                                                                                <label for="safe_time01">
+                                                                                    <span></span>
+                                                                                    <div class="text__box">
+                                                                                        <p class="name">Advanced Technlolgy Enablement</p>
+                                                                                        <p class="sm">Room</p>
+                                                                                    </div>
+                                                                                </label>
+                                                                            </li>
+                                                                            <li class="regi__time__list custom-item">
+                                                                                <input type="radio" name="safe_time" id="safe_time02">
+                                                                                <label for="safe_time02">
+                                                                                    <span></span>
+                                                                                    <div class="text__box">
+                                                                                        <p class="name">Applications</p>
+                                                                                        <p class="sm">Room</p>
+                                                                                    </div>
+                                                                                </label>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                        <!-- // Day 2 : SAFE™ Forum -->
+                                
+                                                        <!-- Day 1 - 2 : SFF & SAFE™ Forum< -->
+                                                        <form action="" id="form2" name="form2" data-id="parti_option03_us" class="day_form">
+                                                            <div class="popup__wr" >
+                                                                <ul class="sff-safe-check">
+                                                                    <li>
+                                                                        <div class="chk__box">
+                                                                            <input type="checkbox" name="sff_safe_check01" id="sff_safe_check01" class="parti_time" checked disabled>
+                                                                            <label for="sff_safe_check01"><span></span></label>
+                                                                        </div>
+                                                                        <div class="text__box">
+                                                                            <p class="name">SFF</p>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="chk__box">
+                                                                            <input type="checkbox" name="sff_safe_check02" id="sff_safe_check02" class="parti_time" checked disabled>
+                                                                            <label for="sff_safe_check02"><span></span></label>
+                                                                        </div>
+                                                                        <div class="text__box">
+                                                                            <p class="name">SAFE</p>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                                <div class="regi__time__box">
+                                                                    <p class="text fc-gr">
+                                                                        <b>Choose the Session</b>
+                                                                        You can choose to participate in Day 2 : SAFE™ Forum, please check a session of interest
+                                                                    </p>
+                                                                    <div class="session-item">
+                                                                        <strong class="tit-time">10:00~12:45</strong>
+                                                                        <div class="regi__time__list">
+                                                                            <input type="radio" name="sff_safe_common" id="sff_safe_common" value="Common Session" checked disabled>
+                                                                            <label for="sff_safe_common"><span></span><p>Common Session</p></label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="session-item">
+                                                                        <strong class="tit-time">13:00~15:55</strong>
+                                                                        <ul>
+                                                                            <li class="regi__time__list custom-item">
+                                                                                <input type="radio" name="sff_safe_time" id="sff_safe_time01" checked>
+                                                                                <label for="sff_safe_time01">
+                                                                                    <span></span>
+                                                                                    <div class="text__box">
+                                                                                        <p class="name">Advanced Technlolgy Enablement</p>
+                                                                                        <p class="sm">Room</p>
+                                                                                    </div>
+                                                                                </label>
+                                                                            </li>
+                                                                            <li class="regi__time__list custom-item">
+                                                                                <input type="radio" name="sff_safe_time" id="sff_safe_time02">
+                                                                                <label for="sff_safe_time02">
+                                                                                    <span></span>
+                                                                                    <div class="text__box">
+                                                                                        <p class="name">Applications</p>
+                                                                                        <p class="sm">Room</p>
+                                                                                    </div>
+                                                                                </label>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                        <!-- // Day 1 - 2 : SFF & SAFE™ Forum< -->
+                                                    </section>
+                                                </div>
+                                                <button type="button" class='next_btn next-step btn__submit'>Next</button>
+                                                <div class="back__popup__wr">
+                                                    <div class="inbox">
+                                                        <div class="back__popup__box">
+                                                            <p>
+                                                                <b>Would you like to<br>leave this page?</b>
+                                                                If you leave this page, the content you are creating <br class="hidden480">
+                                                                will not be saved.
+                                                            </p>
+                                                            <div class="popup__btn__wr">
+                                                                <a href="#" class="close__wr">Back</a>
+                                                                <a href="#" class="back">Leave</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <!-- // 4. 이벤트/세션 선택 :: US -->
+
+                                            <!-- 5. 개인정보 입력 :: US -->
+                                            <section class="regi-step step04" data-step-country="us" data-regi-step="4">
+                                                <button class="btn-prev icon" type="button"></button>
+                                                <button class="btn-close btn-leave icon" type="button"></button>
+                                                <div class="regi__contents__wr regi__step02__wr">
+                                                    <form action="" id="form1" name="form1">
+                                                        <section class="regi__form__box regi__form__01">
+                                                            <h3 class="title">Enter your participate info</h3>
+                                                            <p class="text">
+                                                                Registration is mandatory for<br class="m_only"> Samsung Foundry Forum visitors and partners.<br>
+                                                                Please fill in the information only in English<br class="m_only"> and click 'Submit'.<br>
+                                                                If you fail to register or have any questions,<br class="m_only"> please contact <a href="mailto:info@samsungfoundryevent.com">info@samsungfoundryevent.com</a>
+                                                            </p>
+                                                        </section>
+                                    
+                                                        <section class="regi__form__box regi__form__03">
+                                                            <h3 class="tit">Enter your information <span class="input_notice">*only allow english characters for text input</span></h3>
+                                                            <div class="write_box">
+                                                                 <input type="email" placeholder="Email address (ID)* Case sensitive*" class="full_input" name="email_address">
+                                                                 <p class="result__email"></p>
+                                                                 <p class="caution">*Please enter your company account.</p>	
+                                                                 <p class="caution">*A verification code will be sent to the email you entered.</p>
+                                                            </div>
+                                    
+                                                            <div class="write_box">
+                                                                 <input type="password" placeholder="Password*" class="full_input" id="password" name="password">
+                                                                 <p class="result__password"></p>
+                                                                 <p class="caution">*Please enter your password 5 or more characters in length, containing at least on of the following: alphabet, numbers.</p>	
+                                                            </div>
+                                    
+                                                            <div class="write_box">
+                                                                <input type="password" placeholder="Confirm Password*" class="full_input" id="confirm_password" name="password_confirm">
+                                                                <p class="result__confirmpassword"></p>
+                                                            </div>
+                                    
+                                                            <div class="write_box flex">
+                                                                <select name="" id="" class="country select_st">
+                                                                    <script type="text/javascript">
+                                                                        DrDw2("DGHJLNS~Country~AF~Afghanistan~AL~Albania~DZ~Algeria~AS~American Samoa~AD~Andorra~AO~Angola~AI~Anguilla~AQ~Antarctica~AG~Antigua and Barbuda~AR~Argentina~AM~Armenia~AW~Aruba~AC~Ascension Island~AU~Australia~AT~Austria~AZ~Azerbaijan~BS~Bahamas~BH~Bahrain~BD~Bangladesh~BB~Barbados~BY~Belarus~BE~Belgium~BZ~Belize~BJ~Benin~BM~Bermuda~BT~Bhutan~BO~Bolivia~BA~Bosnia and Herzegovina~BW~Botswana~BV~Bouvet Island~BR~Brazil~IO~British Indian Ocean Territory~BN~Brunei~BG~Bulgaria~BF~Burkina Faso~BI~Burundi~KH~Cambodia~CM~Cameroon~CA~Canada~CV~Cape Verde~KY~Cayman Islands~CF~Central African Republic~TD~Chad~CL~Chile~CN~China~CX~Christmas Island~CC~Cocos (Keeling) Islands~CO~Colombia~KM~Comoros~CG~Congo~CD~Congo (DRC)~CK~Cook Islands~CR~Costa Rica~CI~C?e d'Ivoire~HR~Croatia~CU~Cuba~CY~Cyprus~CZ~Czech Republic~DK~Denmark~DJ~Djibouti~DM~Dominica~DO~Dominican Republic~EC~Ecuador~EG~Egypt~SV~El Salvador~GQ~Equatorial Guinea~ER~Eritrea~EE~Estonia~ET~Ethiopia~FK~Falkland Islands (Islas Malvinas)~FO~Faroe Islands~FJ~Fiji Islands~FI~Finland~FR~France~GF~French Guiana~PF~French Polynesia~TF~French Southern and Antarctic Lands~GA~Gabon~GM~Gambia, The~GE~Georgia~DE~Germany~GH~Ghana~GI~Gibraltar~GR~Greece~GL~Greenland~GD~Grenada~GP~Guadeloupe~GU~Guam~GT~Guatemala~GG~Guernsey~GN~Guinea~GW~Guinea-Bissau~GY~Guyana~HT~Haiti~HM~Heard Island and McDonald Islands~HN~Honduras~HK~Hong Kong SAR~HU~Hungary~IS~Iceland~IN~India~ID~Indonesia~IR~Iran~IQ~Iraq~IE~Ireland~IM~Isle of Man~IL~Israel~IT~Italy~JM~Jamaica~JP~Japan~JE~Jersey~JO~Jordan~KZ~Kazakhstan~KE~Kenya~KI~Kiribati~KW~Kuwait~KG~Kyrgyzstan~LA~Laos~LV~Latvia~LB~Lebanon~LS~Lesotho~LR~Liberia~LY~Libya~LI~Liechtenstein~LT~Lithuania~LU~Luxembourg~MO~Macao SAR~MK~Macedonia, Former Yugoslav Republic of~MG~Madagascar~MW~Malawi~MY~Malaysia~MV~Maldives~ML~Mali~MT~Malta~MH~Marshall Islands~MQ~Martinique~MR~Mauritania~MU~Mauritius~YT~Mayotte~MX~Mexico~FM~Micronesia~MD~Moldova~MC~Monaco~MN~Mongolia~MS~Montserrat~MA~Morocco~MZ~Mozambique~MM~Myanmar~NA~Namibia~NR~Nauru~NP~Nepal~NL~Netherlands~AN~Netherlands Antilles~NC~New Caledonia~NZ~New Zealand~NI~Nicaragua~NE~Niger~NG~Nigeria~NU~Niue~NF~Norfolk Island~MP~Northern Mariana Islands~NO~Norway~OM~Oman~PK~Pakistan~PW~Palau~PS~Palestinian Authority~PA~Panama~PG~Papua New Guinea~PY~Paraguay~PE~Peru~PH~Philippines~PN~Pitcairn Islands~PL~Poland~PT~Portugal~PR~Puerto Rico~QA~Qatar~RE~Reunion~RO~Romania~RU~Russia~RW~Rwanda~WS~Samoa~SM~San Marino~ST~S? Tom?and Pr?cipe~SA~Saudi Arabia~SN~Senegal~YU~Serbia and Montenegro~SC~Seychelles~SL~Sierra Leone~SG~Singapore~SK~Slovakia~SI~Slovenia~SB~Solomon Islands~SO~Somalia~ZA~South Africa~KR~South Korea~GS~South Georgia and the South Sandwich Islands~ES~Spain~LK~Sri Lanka~SH~St. Helena~KN~St. Kitts and Nevis~LC~St. Lucia~PM~St. Pierre and Miquelon~VC~St. Vincent and the Grenadines~SD~Sudan~SR~Suriname~SJ~Svalbard and Jan Mayen~SZ~Swaziland~SE~Sweden~CH~Switzerland~SY~Syria~TW~Taiwan~TJ~Tajikistan~TZ~Tanzania~TH~Thailand~TP~Timor-Leste~TG~Togo~TK~Tokelau~TO~Tonga~TT~Trinidad and Tobago~TA~Tristan da Cunha~TN~Tunisia~TR~Turkey~TM~Turkmenistan~TC~Turks and Caicos Islands~TV~Tuvalu~UG~Uganda~UA~Ukraine~AE~United Arab Emirates~UK~United Kingdom~US~United States~UM~United States Minor Outlying Islands~UY~Uruguay~UZ~Uzbekistan~VU~Vanuatu~VA~Vatican City~VE~Venezuela~VN~Vietnam~VI~Virgin Islands~VG~Virgin Islands, British~WF~Wallis and Futuna~YE~Yemen~ZM~Zambia~ZW~Zimbabwe","");
+                                                                        function DrDw2(F,b){
+                                                                            var aCL=F.split("~");
+                                                                            var iC=aCL.length;
+                                                                            if(aCL[iC-1]=="")iC--;
+                                                                            var i=0;
+                                                                            while(i<iC){
+                                                                                document.write("<option value=\""+aCL[i]+"\""+(b==aCL[i]?" selected":"")+">"+aCL[i+1]);i=i+2;
+                                                                            }
+                                                                        }
+                                                                    </script>
+                                                                </select>
+                                                            </div>
+                                    
+                                                            <div class="write_box flex">
+                                                                <input type="text" placeholder="First Name*" name="first_name">
+                                                                <input type="text" placeholder="Last Name*" class="last" name="last_name">
+                                                            </div>
+                                    
+                                                            <div class="write_box flex">
+                                                                <input type="text" placeholder="Company Name*" name="company_name">
+                                                                <select name="" id="" class="last select_st">
+                                                                    <option value="Company Type">Company Type</option>
+                                                                    <option value="Equipment/Materials">Equipment/Materials</option>
+                                                                    <option value="Fabless">Fabless</option>
+                                                                    <option value="IDM">IDM</option>
+                                                                    <option value="IP/EDA/Cloud/PKG">IP/EDA/Cloud/PKG</option>
+                                                                    <option value="Others">Others</option>
+                                                                    <option value="Samsung">Samsung</option>
+                                                                </select>
+                                                            </div>
+                                    
+                                                            <div class="write_box flex">
+                                                                <select name="" id="" class="job_function select_st">
+                                                                    <option value="Job Function">Job Function</option>
+                                                                    <option value="Architect">Architect</option>
+                                                                    <option value="Designer">Designer</option>
+                                                                    <option value="DesignerManager">DesignerManager</option>
+                                                                    <option value="Others">Others</option>
+                                                                    <option value="Procurement">Procurement</option>
+                                                                    <option value="Sales and Marketing">Sales and Marketing</option>
+                                                                </select>
+                                                                <input type="text" placeholder="Job Title*" class="last" name="job">
+                                                            </div>
+                                                        </section>
+                                    
+                                                        <section class="regi__form__box regi__form__04">
+                                                            <ul>
+                                                                <li>
+                                                                    <div class="text__box">
+                                                                        <p class="">Please click 'I agree' to the Terms and Conditions</p>
+                                                                        <a href="https://semiconductor.samsung.com/legal/" target="_blank" data-modal-key='terms'>View more</a>
+                                                                    </div>
+                                    
+                                                                    <div class="chk__box agree_01">
+                                                                        <input type="checkbox" id="agree_01_us" name="agree_01">
+                                                                        <label for="agree_01_us"><span></span><p>I agree</p></label>
+                                                                    </div>
+                                                                </li>
+                                    
+                                                                <li>
+                                                                    <div class="text__box">
+                                                                        <p class="">Please click 'I agree' to the Policy and the Collection of Personal Information</p>
+                                                                        <a href="https://semiconductor.samsung.com/privacy/" target="_blank" data-modal-key='policy'>View more</a>
+                                                                    </div>
+                                                                    
+                                                                    <div class="chk__box agree_02">
+                                                                        <input type="checkbox" id="agree_02_us" name="agree_02">
+                                                                        <label for="agree_02_us"><span></span><p>I agree</p></label>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </section>	
+                                                        <button type="button" class='btn__submit'>Submit</button>
+                                                    </form>
+                                                </div>
+                                                <div class="back__popup__wr">
+                                                    <div class="inbox">
+                                                        <div class="back__popup__box">
+                                                            <p>
+                                                                <b>Would you like to<br>leave this page?</b>
+                                                                If you leave this page, the content you are creating <br class="hidden480">
+                                                                will not be saved.
+                                                            </p>
+                                                            <div class="popup__btn__wr">
+                                                                <a href="#" class="close__wr">Back</a>
+                                                                <a href="#" class="back">Leave</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <!-- 5. // 개인정보 입력 :: US -->
+
+                                            <!-- 4. 이벤트/세션 선택 :: KR -->
+                                            <section class="regi-step step03 step-session" data-step-country="kr" data-regi-step="3">
+                                                <button class="btn-prev icon" type="button"></button>
+                                                <button class="btn-close btn-leave icon" type="button"></button>
+                                                <section class="regi__form__box regi__form__01">
+                                                    <h3 class="title">Select forum you want to <br>participate in</h3>
+                                                    <p class="text">
+                                                        포럼 참석을 위한 등록 정보를 입력 부탁드립니다.<br>
+                                                        정보 입력은 영어만 가능하며, 입력 후 제출 버튼을 눌러주세요.<br>
+                                                        등록에 어려움이 있거나 질문사항이 있으시면<br class="m_only"> <a href="mailto:info@samsungfoundryevent.com">info@samsungfoundryevent.com</a>으로 연락 주시길 바랍니다.
+                                                    </p>
+                                                </section>
+                            
+                                                <section class="regi__form__box regi__form__02">
+                                                    <h3 class="tit">Forum to participate*</h3>
+                                                    <form>
+                                                        <ul class="btn__regi__wr">
+                                                            <li class="regi__day__list regi__day__list01">
+                                                                <input type="radio" name="participate_day_kr" id="parti_option01_kr" data-radio-type='none' value="SFF" class="regi-input" checked>
+                                                                <label for="parti_option01_kr"><span></span><p>SFF</p></label>
+                                                            </li>
+                                                            <li class="regi__day__list regi__day__list02">
+                                                                <input type="radio" name="participate_day_kr" id="parti_option02_kr" data-radio-type='none' value="SAFE™ Forum" class="regi-input">
+                                                                <label for="parti_option02_kr"><span></span><p>SAFE™ Forum</p></label>
+                                                            </li>
+                                                            <li class="regi__day__list regi__day__list03">
+                                                                <input type="radio" name="participate_day_kr" id="parti_option03_kr" data-radio-type='none' value="SFF & SAFE™ Forum" class="regi-input">
+                                                                <label for="parti_option03_kr"><span></span><p>SFF & SAFE™ Forum</p></label>
+                                                            </li>
+                                                        </ul>
+                                                    </form>
+                                                </section>
+                                                <button type="button" class='next_btn next-step btn__submit'>Next</button>
+                                                <div class="back__popup__wr">
+                                                    <div class="inbox">
+                                                        <div class="back__popup__box">
+                                                            <p>
+                                                                <b>Would you like to<br>leave this page?</b>
+                                                                If you leave this page, the content you are creating <br class="hidden480">
+                                                                will not be saved.
+                                                            </p>
+                                                            <div class="popup__btn__wr">
+                                                                <a href="#" class="close__wr">Back</a>
+                                                                <a href="#" class="back">Leave</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <!-- // 4. 이벤트/세션 선택 :: KR -->
+
+                                            <!-- 5. 개인정보 입력 :: KR -->
+                                            <section class="regi-step step04" data-step-country="kr" data-regi-step="4">
+                                                <button class="btn-prev icon" type="button"></button>
+                                                <button class="btn-close btn-leave icon" type="button"></button>
+                                                <div class="regi__contents__wr regi__step02__wr">
+                                                    <form action="" id="form1" name="form1">
+                                                        <section class="regi__form__box regi__form__01">
+                                                            <h3 class="title">Enter your participate info</h3>
+                                                            <p class="text">
+                                                                포럼 참석을 위한 등록 정보를 입력 부탁드립니다.<br>
+                                                                정보 입력은 영어만 가능하며, 입력 후 제출 버튼을 눌러주세요.<br>
+                                                                등록에 어려움이 있거나 질문사항이 있으시면<br class="m_only"> <a href="mailto:info@samsungfoundryevent.com">info@samsungfoundryevent.com</a>으로 연락 주시길 바랍니다.
+                                                            </p>
+                                                        </section>
+                                    
+                                                        <section class="regi__form__box regi__form__03">
+                                                            <h3 class="tit">Enter your information <span class="input_notice">*only allow english characters for text input</span></h3>
+                                                            <div class="write_box">
+                                                                 <input type="email" placeholder="Email address (ID)* Case sensitive*" class="full_input" name="email_address">
+                                                                 <p class="result__email"></p>
+                                                                 <p class="caution">*Please enter your company account.</p>	
+                                                                 <p class="caution">*A verification code will be sent to the email you entered.</p>
+                                                            </div>
+                                    
+                                                            <div class="write_box">
+                                                                 <input type="password" placeholder="Password*" class="full_input" id="password" name="password">
+                                                                 <p class="result__password"></p>
+                                                                 <p class="caution">*Please enter your password 5 or more characters in length, containing at least on of the following: alphabet, numbers.</p>	
+                                                            </div>
+                                    
+                                                            <div class="write_box">
+                                                                <input type="password" placeholder="Confirm Password*" class="full_input" id="confirm_password" name="password_confirm">
+                                                                <p class="result__confirmpassword"></p>
+                                                            </div>
+                                    
+                                                            <div class="write_box flex">
+                                                                <select name="" id="" class="country select_st">
+                                                                    <script type="text/javascript">
+                                                                        DrDw2("DGHJLNS~Country~AF~Afghanistan~AL~Albania~DZ~Algeria~AS~American Samoa~AD~Andorra~AO~Angola~AI~Anguilla~AQ~Antarctica~AG~Antigua and Barbuda~AR~Argentina~AM~Armenia~AW~Aruba~AC~Ascension Island~AU~Australia~AT~Austria~AZ~Azerbaijan~BS~Bahamas~BH~Bahrain~BD~Bangladesh~BB~Barbados~BY~Belarus~BE~Belgium~BZ~Belize~BJ~Benin~BM~Bermuda~BT~Bhutan~BO~Bolivia~BA~Bosnia and Herzegovina~BW~Botswana~BV~Bouvet Island~BR~Brazil~IO~British Indian Ocean Territory~BN~Brunei~BG~Bulgaria~BF~Burkina Faso~BI~Burundi~KH~Cambodia~CM~Cameroon~CA~Canada~CV~Cape Verde~KY~Cayman Islands~CF~Central African Republic~TD~Chad~CL~Chile~CN~China~CX~Christmas Island~CC~Cocos (Keeling) Islands~CO~Colombia~KM~Comoros~CG~Congo~CD~Congo (DRC)~CK~Cook Islands~CR~Costa Rica~CI~C?e d'Ivoire~HR~Croatia~CU~Cuba~CY~Cyprus~CZ~Czech Republic~DK~Denmark~DJ~Djibouti~DM~Dominica~DO~Dominican Republic~EC~Ecuador~EG~Egypt~SV~El Salvador~GQ~Equatorial Guinea~ER~Eritrea~EE~Estonia~ET~Ethiopia~FK~Falkland Islands (Islas Malvinas)~FO~Faroe Islands~FJ~Fiji Islands~FI~Finland~FR~France~GF~French Guiana~PF~French Polynesia~TF~French Southern and Antarctic Lands~GA~Gabon~GM~Gambia, The~GE~Georgia~DE~Germany~GH~Ghana~GI~Gibraltar~GR~Greece~GL~Greenland~GD~Grenada~GP~Guadeloupe~GU~Guam~GT~Guatemala~GG~Guernsey~GN~Guinea~GW~Guinea-Bissau~GY~Guyana~HT~Haiti~HM~Heard Island and McDonald Islands~HN~Honduras~HK~Hong Kong SAR~HU~Hungary~IS~Iceland~IN~India~ID~Indonesia~IR~Iran~IQ~Iraq~IE~Ireland~IM~Isle of Man~IL~Israel~IT~Italy~JM~Jamaica~JP~Japan~JE~Jersey~JO~Jordan~KZ~Kazakhstan~KE~Kenya~KI~Kiribati~KW~Kuwait~KG~Kyrgyzstan~LA~Laos~LV~Latvia~LB~Lebanon~LS~Lesotho~LR~Liberia~LY~Libya~LI~Liechtenstein~LT~Lithuania~LU~Luxembourg~MO~Macao SAR~MK~Macedonia, Former Yugoslav Republic of~MG~Madagascar~MW~Malawi~MY~Malaysia~MV~Maldives~ML~Mali~MT~Malta~MH~Marshall Islands~MQ~Martinique~MR~Mauritania~MU~Mauritius~YT~Mayotte~MX~Mexico~FM~Micronesia~MD~Moldova~MC~Monaco~MN~Mongolia~MS~Montserrat~MA~Morocco~MZ~Mozambique~MM~Myanmar~NA~Namibia~NR~Nauru~NP~Nepal~NL~Netherlands~AN~Netherlands Antilles~NC~New Caledonia~NZ~New Zealand~NI~Nicaragua~NE~Niger~NG~Nigeria~NU~Niue~NF~Norfolk Island~MP~Northern Mariana Islands~NO~Norway~OM~Oman~PK~Pakistan~PW~Palau~PS~Palestinian Authority~PA~Panama~PG~Papua New Guinea~PY~Paraguay~PE~Peru~PH~Philippines~PN~Pitcairn Islands~PL~Poland~PT~Portugal~PR~Puerto Rico~QA~Qatar~RE~Reunion~RO~Romania~RU~Russia~RW~Rwanda~WS~Samoa~SM~San Marino~ST~S? Tom?and Pr?cipe~SA~Saudi Arabia~SN~Senegal~YU~Serbia and Montenegro~SC~Seychelles~SL~Sierra Leone~SG~Singapore~SK~Slovakia~SI~Slovenia~SB~Solomon Islands~SO~Somalia~ZA~South Africa~KR~South Korea~GS~South Georgia and the South Sandwich Islands~ES~Spain~LK~Sri Lanka~SH~St. Helena~KN~St. Kitts and Nevis~LC~St. Lucia~PM~St. Pierre and Miquelon~VC~St. Vincent and the Grenadines~SD~Sudan~SR~Suriname~SJ~Svalbard and Jan Mayen~SZ~Swaziland~SE~Sweden~CH~Switzerland~SY~Syria~TW~Taiwan~TJ~Tajikistan~TZ~Tanzania~TH~Thailand~TP~Timor-Leste~TG~Togo~TK~Tokelau~TO~Tonga~TT~Trinidad and Tobago~TA~Tristan da Cunha~TN~Tunisia~TR~Turkey~TM~Turkmenistan~TC~Turks and Caicos Islands~TV~Tuvalu~UG~Uganda~UA~Ukraine~AE~United Arab Emirates~UK~United Kingdom~US~United States~UM~United States Minor Outlying Islands~UY~Uruguay~UZ~Uzbekistan~VU~Vanuatu~VA~Vatican City~VE~Venezuela~VN~Vietnam~VI~Virgin Islands~VG~Virgin Islands, British~WF~Wallis and Futuna~YE~Yemen~ZM~Zambia~ZW~Zimbabwe","");
+                                                                        function DrDw2(F,b){
+                                                                            var aCL=F.split("~");
+                                                                            var iC=aCL.length;
+                                                                            if(aCL[iC-1]=="")iC--;
+                                                                            var i=0;
+                                                                            while(i<iC){
+                                                                                document.write("<option value=\""+aCL[i]+"\""+(b==aCL[i]?" selected":"")+">"+aCL[i+1]);i=i+2;
+                                                                            }
+                                                                        }
+                                                                    </script>
+                                                                </select>
+                                                            </div>
+                                    
+                                                            <div class="write_box flex">
+                                                                <input type="text" placeholder="First Name*" name="first_name">
+                                                                <input type="text" placeholder="Last Name*" class="last" name="last_name">
+                                                            </div>
+                                    
+                                                            <div class="write_box flex">
+                                                                <input type="text" placeholder="Company Name*" name="company_name">
+                                                                <select name="" id="" class="last select_st">
+                                                                    <option value="Company Type">Company Type</option>
+                                                                    <option value="Equipment/Materials">Equipment/Materials</option>
+                                                                    <option value="Fabless">Fabless</option>
+                                                                    <option value="IDM">IDM</option>
+                                                                    <option value="IP/EDA/Cloud/PKG">IP/EDA/Cloud/PKG</option>
+                                                                    <option value="Others">Others</option>
+                                                                    <option value="Samsung">Samsung</option>
+                                                                </select>
+                                                            </div>
+                                    
+                                                            <div class="write_box flex">
+                                                                <select name="" id="" class="job_function select_st">
+                                                                    <option value="Job Function">Job Function</option>
+                                                                    <option value="Architect">Architect</option>
+                                                                    <option value="Designer">Designer</option>
+                                                                    <option value="DesignerManager">DesignerManager</option>
+                                                                    <option value="Others">Others</option>
+                                                                    <option value="Procurement">Procurement</option>
+                                                                    <option value="Sales and Marketing">Sales and Marketing</option>
+                                                                </select>
+                                                                <input type="text" placeholder="Job Title*" class="last" name="job">
+                                                            </div>
+                                                        </section>
+                                    
+                                                        <section class="regi__form__box regi__form__04">
+                                                            <ul>
+                                                                <li>
+                                                                    <div class="text__box">
+                                                                        <p class="">Please click 'I agree' to the Terms and Conditions</p>
+                                                                        <a href="https://semiconductor.samsung.com/legal/" target="_blank" data-modal-key='terms'>View more</a>	
+                                                                    </div>
+                                    
+                                                                    <div class="chk__box agree_01">
+                                                                        <input type="checkbox" id="agree_01_kr" name="agree_01">
+                                                                        <label for="agree_01_kr"><span></span><p>I agree</p></label>
+                                                                    </div>
+                                                                </li>
+                                    
+                                                                <li>
+                                                                    <div class="text__box">
+                                                                        <p class="">Please click 'I agree' to the Policy and the Collection of Personal Information</p>
+                                                                        <a href="https://semiconductor.samsung.com/privacy/" target="_blank" data-modal-key='policy'>View more</a>
+                                                                    </div>
+                                                                    
+                                                                    <div class="chk__box agree-02">
+                                                                        <input type="checkbox" id="agree_02_kr" name="agree_02">
+                                                                        <label for="agree_02_kr"><span></span><p>I agree</p></label>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                
+                                                        </section>	
+                                                        <button type="button" class='btn__submit'>Submit</button>
+                                                    </form>
+                                                </div>
+                                                <div class="back__popup__wr">
+                                                    <div class="inbox">
+                                                        <div class="back__popup__box">
+                                                            <p>
+                                                                <b>Would you like to<br>leave this page?</b>
+                                                                If you leave this page, the content you are creating <br class="hidden480">
+                                                                will not be saved.
+                                                            </p>
+                                                            <div class="popup__btn__wr">
+                                                                <a href="#" class="close__wr">Back</a>
+                                                                <a href="#" class="back">Leave</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <!-- // 5. 개인정보 입력 :: KR -->
+
+                                            <!-- 6. 등록(회원가입) 완료 -->
+                                            <section class="regi__step01_box regi-step step05" data-regi-step="5">
+                                                <button class="btn-close icon" type="button"></button>
+                                                <div class="regi__form__box regi__form__01">
+                                                    <span class="sub-tit">Thank you</span>
+                                                    <h3 class="title">Your registration is success.</h3>
+                                                    <p class="text">
+                                                        If you have any questions, please contact info <a href="mailto:info@samsungfoundryevent.com">info@samsungfoundryevent.com</a>. <br>Then I look forward to seeing you at the 2023 event. Thank you.
+                                                    </p>
+                                                </div>
+                                            </section>
+                                            <!-- // 2. 이메일 등록/인증 -->
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- // Additional Registration 팝업 -->
+
+                    </ul>
+                </div>
+            </div>
+            <!-- // popup -->
+
+            <!--  2023.06.07. : 공지사항 팝업 추가. 기존 별도로 있던 notice_popup_kr.html 삽입 -->
+            <div class="notic-popup">
+              <div class="dimmed"></div>
+              <div class="popup-detail">
+                  <div class="detail-inner">
+                      <button class="close-btn icon" type="button"></button>
+                      <div class="swiper notice-pop-slide">
+                          <ul class="swiper-wrapper">
+                              <!-- <li class="swiper-slide">
+                                  <div class="pop-inner">
+                                      <strong class="top-tit">Notice</strong>
+                                      <h3 class="tit">SAFE 2023 Korea <br class="m_only">행사장 변경 안내</h3>
+                                      <p class="desc">2023 SAFE Korea 행사장이 Intercontinental Seoul Coex 비바체에서 <br>
+                                          하모니볼룸으로 변경되었습니다.</p>
+                                      <picture>
+                                          <source media="(min-width: 768px)"srcset="./images/notice_pop_pc.jpg">
+                                          <source media="(min-width: 0px) and (max-width: 767px)" srcset="./images/notice_pop_mo%402x.jpg">
+                                          <img src="./images/notice_pop_pc.jpg" alt="">
+                                      </picture>
+                                      <a href="#NoticeContents1" class="basic-btn light-bg detail-btn notic-btn">공지사항 자세히보기</a>
+                                  </div>
+                              </li> -->
+                              <!-- <li class="swiper-slide">
+                                  <div class="pop-inner">
+                                      <strong class="top-tit">Notice</strong>
+                                      <h3 class="tit">SAFE 2023 Korea <br class="m_only">행사장 변경 안내</h3>
+                                      <p class="desc">2023 SAFE Korea 행사장이 Intercontinental Seoul Coex 비바체에서 <br>
+                                          하모니볼룸으로 변경되었습니다.</p>
+                                      <picture>
+                                          <source media="(min-width: 768px)"srcset="./images/notice_pop_pc.jpg">
+                                          <source media="(min-width: 0px) and (max-width: 767px)" srcset="./images/notice_pop_mo%402x.jpg">
+                                          <img src="./images/notice_pop_pc.jpg" alt="">
+                                      </picture>
+                                      <a href="#NoticeContents2" class="basic-btn light-bg detail-btn notic-btn">공지사항 자세히보기</a>
+                                  </div>
+                              </li> -->
+                              <!-- <li class="swiper-slide">
+                                  <div class="pop-inner">
+                                      <strong class="top-tit">Notice</strong>
+                                      <h3 class="tit">SAFE 2023 Korea 행사장 변경 안내</h3>
+                                      <p class="desc">2023 SAFE Korea 행사장이 Intercontinental Seoul Coex 비바체에서 <br>
+                                          하모니볼룸으로 변경되었습니다.</p>
+                                      <a href="#NoticeContents3" class="basic-btn light-bg detail-btn notic-btn">공지사항 자세히보기</a>
+                                  </div>
+                              </li> -->
+                          </ul>
+                          <div class="notice-pagination swiper-pagination"></div>
+                      </div>
+                      <button class="btn-all-day" type="button">오늘 하루동안 보지 않기</button>
+                  </div>
+              </div>
+          </div>
+          <!--  //2023.06.07. : 공지사항 팝업 추가. 기존 별도로 있던 notice_popup_kr.html 삽입 -->
+
+        </div>
+    </div>
+
+</body>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBV211brwTFXIDVLjaT8vy_92DlqjVDXlQ&callback=initMap"></script>
+<script src="https://www.recaptcha.net/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+<script src="./js/mypage.js"></script>
+<!-- 2023.06.08 :: notice 팝업 분리하여 작업-->
+<script src="./js/notice.js"></script>
+
+</html>
+
+
+
+    
+
+
+

@@ -1,0 +1,228 @@
+/* 2023.06.07. :: 공지사항 팝업 추가 */
+.notic-popup{
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .notic-popup .dimmed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+  }
+  .notic-popup .popup-detail{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 72px 44px 0 60px;
+    width: calc(100% - 64px);
+    max-width: 804px;
+    max-height: 90vh;
+    margin: 0 auto;
+    text-align: center;
+    background: #fff;
+    border-radius: 20px;
+    overflow-y: scroll;
+    scrollbar-width: 1px;
+    scrollbar-color: gray transparent;
+  }
+  .notic-popup .popup-detail .detail-inner{
+    position: relative;
+    padding-bottom: 96px;
+  }
+  .notic-popup .popup-detail::-webkit-scrollbar {
+  width: 16px;
+  }
+  .notic-popup .popup-detail::-webkit-scrollbar-thumb {
+  border: 6px solid transparent;
+  background-clip: padding-box;
+  border-radius: 20px;
+  background-color: gray;
+  }
+  .notic-popup .popup-detail::-webkit-scrollbar-track {
+  background-color: transparent;
+  }
+  .notic-popup .close-btn{
+    z-index: 10;
+    position: absolute;
+    top: 24px;
+    right: 8px;
+    width: 24px;
+    height: 24px;
+    background: url("../images/icon-bold-action-delete.svg") no-repeat center/100%;
+  }
+  .notic-popup .notice-pop-slide .top-tit{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.33;
+    color: #000;
+    display: block;
+  }
+  .notic-popup .notice-pop-slide .tit{
+    margin-top: 8px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.42;
+    color: #000;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .notic-popup .notice-pop-slide .desc{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.43;
+    color: #1a1a1a;
+    margin-top: 8px;
+  }
+  .notic-popup .notice-pop-slide picture{
+    margin-top: 32px;
+  }.notic-popup .notice-pop-slide picture img{
+      width: 100%;
+  }
+  .notic-popup .notice-pop-slide .detail-btn{
+    margin-top: 60px;
+    max-width: 564px;
+    width: 100%;
+  }
+  .notic-popup  .swiper-horizontal>.swiper-pagination-bullets, 
+  .notic-popup .swiper-pagination-bullets.swiper-pagination-horizontal{
+    position: relative;
+    top: auto;
+    bottom: auto;
+    margin-top: 36px;
+    height: 8px;
+  }
+  .notic-popup .notice-pagination > span{
+    vertical-align: top;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 1;
+  }
+  .notic-popup .notice-pagination > span.swiper-pagination-bullet-active{
+    background-color: #000;
+  }
+  .notic-popup .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{
+    margin: 0 6px;
+  }
+  .notic-popup .btn-all-day{
+    z-index: 10;
+    position: absolute;
+    bottom: 48px;
+    right: 0;
+    font-weight: 400;
+    font-size: 14px;
+    color: #757575;
+    line-height: 1.43;
+    text-decoration: underline;
+  }
+  @media screen and (max-width: 767px) { 
+    .notic-popup .popup-detail{
+        width: calc(100% - 48px);
+        padding: 56px 16px 0 32px;
+    }
+    .notic-popup .popup-detail .detail-inner{
+        padding-bottom: 76px;
+    }
+    .notic-popup .notice-pop-slide .top-tit{
+        font-size: 14px;
+        line-height: 1.43;
+    }
+    .notic-popup .notice-pop-slide .tit{
+        font-size: 20px;
+        line-height: 1.4;
+        margin-top: 4px;
+        white-space: normal;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical
+    }
+    .notic-popup .notice-pop-slide .desc{
+        font-size: 12px;
+        line-height: 1.33;
+    }
+    .notic-popup .notice-pop-slide picture img{
+        width: 100%;
+    }
+    .notic-popup .notice-pop-slide picture{
+        margin-top: 16px;
+    }
+    .notic-popup .notice-pop-slide .detail-btn{
+        margin-top: 40px;
+    }
+    .notic-popup .swiper-horizontal>.swiper-pagination-bullets, 
+    .notic-popup .swiper-pagination-bullets.swiper-pagination-horizontal{
+        margin-top: 28px;
+    }
+    .notic-popup .btn-all-day{
+        bottom: 32px;
+        font-size: 12px;
+        line-height: 1.33;
+    }
+  }
+  
+  
+  .basic-btn {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+    -webkit-transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.2s, color cubic-bezier(0.4, 0, 0.2, 1) 0.2s, border-color cubic-bezier(0.4, 0, 0.2, 1) 0.2s, font-weight cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+    -o-transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.2s, color cubic-bezier(0.4, 0, 0.2, 1) 0.2s, border-color cubic-bezier(0.4, 0, 0.2, 1) 0.2s, font-weight cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+    transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.2s, color cubic-bezier(0.4, 0, 0.2, 1) 0.2s, border-color cubic-bezier(0.4, 0, 0.2, 1) 0.2s, font-weight cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+    vertical-align: middle;
+    color: #000000;
+    cursor: pointer;
+    position: relative;
+    font-weight: 700;
+    text-align: center;
+    white-space: nowrap;
+    text-decoration: none;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    background-color: transparent;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    padding: 0 20px;
+    border-radius: 20px;
+    border: 1px solid #000;
+  }
+  
+  .basic-btn.disabled,
+  .basic-btn:disabled,
+  .basic-btn [aria-disabled='true'] {
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+  
+  .basic-btn.light-bg {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .basic-btn.light-bg:focus,
+  .basic-btn.light-bg:hover {
+    color: #eee;
+    background-color: #555;
+  }
+  
+  .basic-btn.light-bg.disabled,
+  .basic-btn.light-bg:disabled,
+  .basic-btn.light-bg [aria-disabled='true'] {
+    color: #aaa;
+    background-color: #ddd;
+  }
+  
+  
